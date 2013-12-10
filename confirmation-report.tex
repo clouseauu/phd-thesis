@@ -1,0 +1,73 @@
+\documentclass[a4paper,11pt,notitlepage]{article}
+
+% ----------------------------------------------------- %
+% -------------------- IMPORTANT ---------------------- %
+% Note to self:                             						%
+%							                                          %
+% See Lapo Mori's document on writing a thesis		      %
+% with LaTeX. It's full of pointers ... review it	      %
+% periodically						                              %
+% ----------------------------------------------------- %
+
+
+% see previous works for description of what packages do
+%paralist is used for inline lists in a ... a) oh me oh my b) yeah right c) you're a dweeb ... style. Usage: \begin{inparaenum}[\itshape a\upshape)] \item \end{inparaenum}
+% epigraph for quotations, usually at the beginning of chapters/sections
+\usepackage{palatino,natbib,url,graphicx,paralist,epigraph} %setspace
+\usepackage[footnotesize]{caption}
+%\linespread{2}
+%natbib punctuation rules -- see documentation
+\bibpunct{(}{)}{;}{a}{}{,}
+
+\hyphenation{hack-er}
+
+%opening
+
+\title{Ecosystems for Innovation:\newline{}A Look Into the Workings of Hackerspaces\newline{}\small{(working title)}}
+\author{Daniel Angel\\\texttt{Daniel.Angel-Bradford@monash.edu.au}}
+\date{\today} %display date
+
+% just to do a citation with possession apostrophe. it renders Appadurai's (1996)
+\newcommand{\citepos}[1]{\citeauthor{#1}'s \citeyearpar{#1}}
+
+%\includeonly{introduction,confirmation-report/questions,confirmation-report/framework,methodology,appendix}
+
+
+%\setstretch{2}
+\begin{document}
+
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+
+\newpage
+
+\include{introduction}
+
+\include{confirmation-report/questions}
+
+\include{confirmation-report/framework}
+
+\include{methodology}
+
+\include{confirmation-report/samples}
+
+%\include{lit-review}
+
+%\include{framework}
+
+%\appendix
+
+
+
+%\setstretch{1}
+\small
+\bibliographystyle{JMIunofficial}
+\bibliography{../bibliography/bibliography}
+
+\include{confirmation-report/appendix}
+
+\end{document}
